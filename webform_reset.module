@@ -1,0 +1,13 @@
+<?php
+function webform_reset_form_alter(&$form, $form_state, $form_id) {
+  /*Adds a reset button to forms */
+  if (strpos($form_id, 'webform_client_form_') === 0 || ($form_id=='user_register_form')) {
+    $form['actions']['reset'] = array(
+      '#type' => 'button',
+      '#value' => t('Reset'),
+      '#weight' => 100,
+      '#validate' => array(),
+      '#attributes' => array('onclick' => 'this.form.reset(); return false;'),
+      );
+  }
+}

@@ -1,0 +1,13 @@
+;$Id$
+name = Webform Reset
+description = Adds a reset button to webforms
+package= Webform
+core = 7.x
+ 
+files[] = webform_reset.module
+version = "7.x-1.0"
+core = "7.x"
+project = "Webform Reset"
+ 
+; Module dependencies
+dependencies[] = webform
